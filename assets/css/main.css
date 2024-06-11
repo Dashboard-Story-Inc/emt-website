@@ -1127,7 +1127,7 @@ p {
   padding-bottom: 225px; }
 
 /*===========================
-    02. Header CSS 
+    02. Header CSS
 ===========================*/
 /*===== NAVBAR =====*/
 .navbar-area {
@@ -1418,6 +1418,20 @@ p {
         .navbar-nav .nav-item .sub-menu > li > a:hover {
           background: rgba(0, 0, 0, 0.05); }
 
+.call-now h3 {
+  color: #263e0f;
+  font-size: 24px;
+  padding-right: 36px;
+}
+
+@media only screen and (max-width: 991px) {
+  .call-now h3 {
+    font-size: 18px;
+    padding: 10px 0;
+  }
+}
+
+
 .carousel-section-wrapper {
   position: relative;
   z-index: 3; }
@@ -1573,7 +1587,7 @@ p {
     margin-bottom: 20px; }
 
 /*===========================
-    04. About CSS 
+    04. About CSS
 ===========================*/
 .about-section {
   background: #EFF2F9;
@@ -1755,7 +1769,7 @@ p {
     width: 100%; }
 
 /*===========================
-    05. Service CSS 
+    05. Service CSS
 ===========================*/
 .service-section .service-box-style-2 {
   padding: 0;
@@ -1795,7 +1809,7 @@ p {
     padding: 0 30px 35px; }
 
 /*===========================
-    06. Process CSS 
+    06. Process CSS
 ===========================*/
 .process-section .process-img-wrapper {
   position: relative;
@@ -1837,7 +1851,7 @@ p {
 
 
 /*===========================
-    10. Subscribe CSS 
+    10. Subscribe CSS
 ===========================*/
 .subscribe-section {
   position: relative; }
@@ -1881,7 +1895,7 @@ p {
         background-position: right center; }
 
 /*===========================
-    12. Contact CSS 
+    12. Contact CSS
 ===========================*/
 .contact-section {
   position: relative;
@@ -2037,7 +2051,7 @@ p {
     padding: 18px 90px; }
 
 /*===========================
-    13. Footer CSS 
+    13. Footer CSS
 ===========================*/
 .footer {
   position: relative;
