@@ -2050,6 +2050,15 @@ p {
     font-weight: 500;
     padding: 18px 90px; }
 
+.testimony p {
+  font-size: 24px;
+}
+
+.testimony-author {
+  margin-top: 24px;
+  text-align: right;
+}
+
 /*===========================
     13. Footer CSS
 ===========================*/
