@@ -22,6 +22,8 @@
     <link rel="stylesheet" href="assets/css/LineIcons.2.0.css" />
     <link rel="stylesheet" href="assets/css/animate.css" />
     <link rel="stylesheet" href="assets/css/main.css" />
+
+    <script type="module" src="./assets/js/map.js"></script>
   </head>
   <body>
     <!--[if lte IE 9]>
@@ -741,77 +743,22 @@
     <!-- ========================= contact-section end ========================= -->
 
     <!-- ========================= footer start ========================= -->
-    <footer class="footer pt-100">
+    <footer class="footer">
       <div class="container">
-        <div class="row">
-          <div class="col-xl-3 col-lg-4 col-md-6">
-            <div
-              class="footer-widget mb-60 wow fadeInLeft"
-              data-wow-delay=".2s"
-            >
-              <a href="index.html" class="logo mb-30"
-                ><img src="assets/img/logo/logo-emt.png" alt="logo"
-              /></a>
-              <p class="mb-30 footer-desc">
-                At vero eos et accusamus et iusto odio dignissimos ducimus
-                quiblanditiis praesentium
-              </p>
+        <div class="service-map-section">
+          <div class="row">
+            <div class="col-xl-5 col-lg-5">
+              <div class="mb-60 wow fadeInLeft" data-wow-delay=".2s">
+                <h2>Service</h2>
+                <div></div>
+              </div>
+            </div>
+            <div class="col-xl-7 col-lg-7">
+              <div class="map-container">
+                <div id="map"></div>
+              </div>
             </div>
           </div>
-          <!--<div class="col-xl-2 offset-xl-1 col-lg-2 col-md-6">
-                        <div class="footer-widget mb-60 wow fadeInUp" data-wow-delay=".4s">
-                            <h4></h4>
-                            <ul class="footer-links">
-                                <li>
-                                    <a href="javascript:void(0)"></a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0)"></a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0)"></a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0)"></a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-3 col-md-6">
-                        <div class="footer-widget mb-60 wow fadeInUp" data-wow-delay=".6s">
-                            <h4>Service</h4>
-                            <ul class="footer-links">
-                                <li>
-                                    <a href="javascript:void(0)">Home</a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0)">About Us</a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0)">Services</a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0)">Contact</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-3 col-md-6">
-                        <div class="footer-widget mb-60 wow fadeInRight" data-wow-delay=".8s">
-                            <h4>Contact</h4>
-                            <ul class="footer-contact">
-                                <li>
-                                    <p>(661) 808-5303</p>
-                                </li>
-                                <li>
-                                    <p>ride.customercare@gmail.com</p>
-                                </li>
-                                <li>
-                                    <p>Bakersfield, CA</p>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>-->
         </div>
 
         <div class="copyright-area">
@@ -866,5 +813,44 @@
     <script src="assets/js/wow.min.js"></script>
     <script src="assets/js/imagesloaded.min.js"></script>
     <script src="assets/js/main.js"></script>
+    <script>
+      (g => {
+        var h,
+          a,
+          k,
+          p = "The Google Maps JavaScript API",
+          c = "google",
+          l = "importLibrary",
+          q = "__ib__",
+          m = document,
+          b = window;
+        b = b[c] || (b[c] = {});
+        var d = b.maps || (b.maps = {}),
+          r = new Set(),
+          e = new URLSearchParams(),
+          u = () =>
+            h ||
+            (h = new Promise(async (f, n) => {
+              await (a = m.createElement("script"));
+              e.set("libraries", [...r] + "");
+              for (k in g)
+                e.set(k.replace(/[A-Z]/g, t => "_" + t[0].toLowerCase()), g[k]);
+              e.set("callback", c + ".maps." + q);
+              a.src = `https://maps.${c}apis.com/maps/api/js?` + e;
+              d[q] = f;
+              a.onerror = () => (h = n(Error(p + " could not load.")));
+              a.nonce = m.querySelector("script[nonce]")?.nonce || "";
+              m.head.append(a);
+            }));
+        d[l]
+          ? console.warn(p + " only loads once. Ignoring:", g)
+          : (d[l] = (f, ...n) => r.add(f) && u().then(() => d[l](f, ...n)));
+      })({
+        key: "INSERT_KEY_HERE",
+        v: "weekly"
+        // Use the 'v' parameter to indicate the version to use (weekly, beta, alpha, etc.).
+        // Add other bootstrap parameters as needed, using camel case.
+      });
+    </script>
   </body>
 </html>
